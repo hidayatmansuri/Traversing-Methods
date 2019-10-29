@@ -39,4 +39,40 @@ $(document).ready(function() {
 	$("button").click(function(){
 		$("p").fadeIn().fadeOut();
 	});
+	
+	$("#stream1_btn").click(function(){
+		$('.stream1-card').toggleClass('highlight_stream');
+		$('.stream2-card').removeClass('highlight_stream');
+		$('.stream3-card').removeClass('highlight_stream');
+	});
+	
+	$("#stream2_btn").click(function(){
+		$('.stream2-card').toggleClass('highlight_stream');
+		$('.stream1-card').removeClass('highlight_stream');
+		$('.stream3-card').removeClass('highlight_stream');
+	});
+	
+	$("#stream3_btn").click(function(){
+		$('.stream3-card').toggleClass('highlight_stream');
+		$('.stream2-card').removeClass('highlight_stream');
+		$('.stream1-card').removeClass('highlight_stream');
+	});
+	
+	$(".card").click(function(){
+		$(this).siblings().fadeTo(300, .1);
+		$(this).fadeTo(300, 1);
+	});
+	
+	$(".card").dblclick(function(){
+		$(".card").siblings().fadeTo(300, 1);
+	});
+	
+	$(".card").mouseover(function(){
+		$(this).addClass('makeBlack');
+	});
+	
+	$(".card").mouseleave(function(){
+		$(this).removeClass('makeBlack');
+	});
 }); 
+

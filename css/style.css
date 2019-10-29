@@ -77,6 +77,10 @@ div{
 	background-color: #EB5255;
 }
 
+.makeBlack {
+	background-color: black;
+}
+
 #my_footer{
 	width:100%;
 	text-align: center;
